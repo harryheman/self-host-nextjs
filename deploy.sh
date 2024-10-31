@@ -72,7 +72,7 @@ else
 fi
 
 # Для внутренней коммуникации Docker ("db" - название контейнера Postgres)
-DATABASE_URL="postgres://$POSTGRES_USER:$POSTGRES_PASSWORD@db:5432/$POSTGRES_DB?schema=public"
+DATABASE_URL="postgresql://$POSTGRES_USER:$POSTGRES_PASSWORD@db:5432/$POSTGRES_DB?schema=public"
 
 # Создаем файл .env в директории приложения (~/myapp/.env)
 echo "POSTGRES_USER=$POSTGRES_USER" > "$APP_DIR/.env"

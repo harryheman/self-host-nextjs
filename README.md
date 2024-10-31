@@ -75,7 +75,7 @@ http://ваш-домен
 ```bash
 docker exec -it myapp-db-1 sh
 apk add --no-cache postgresql-client
-psql -U myuser -d mydatabase -c '
+psql -U postgres -d mydb -c '
 CREATE TABLE IF NOT EXISTS "todos" (
   "id" serial PRIMARY KEY NOT NULL,
   "content" varchar(255) NOT NULL,
