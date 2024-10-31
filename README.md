@@ -23,7 +23,7 @@ ssh root@your_server_ip
 2. **Загружаем скрипт для деплоя**:
 
 ```bash
-curl -o ~/deploy.sh https://raw.githubusercontent.com/leerob/next-self-host/main/deploy.sh
+curl -o ~/deploy.sh https://raw.githubusercontent.com/harryheman/self-host-nextjs/main/deploy.sh
 ```
 
 Укажите свои данные в переменных `DOMAIN_NAME` и `EMAIL` в файле `deploy.sh`.
@@ -67,7 +67,7 @@ chmod +x ~/deploy.sh
 После завершения деплоя, приложение будет доступно по адресу:
 
 ```
-http://your-provided-domain.com
+http://ваш-домен
 ```
 
 Приложение Next.js и БД PostgreSQL поднимаются и запускаются в контейнерах. Для настройки БД можно использовать `psql`:

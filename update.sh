@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Переменные окружения для скриптов
-REPO_URL="https://github.com/leerob/next-self-host.git"
+REPO_URL="https://github.com/harryheman/self-host-nextjs.git"
 APP_DIR=~/myapp
 
 # Извлекаем последние изменения из репозитория Git
@@ -27,4 +27,4 @@ if ! sudo docker-compose ps | grep "Up"; then
 fi
 
 # Выводим финальное сообщение
-echo "Обновление завершено. Приложение Next.js было развернуто с последними изменениями."
+echo "Обновление завершено. Приложение Next.js развернуто с последними изменениями."

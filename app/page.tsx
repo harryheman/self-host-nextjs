@@ -21,7 +21,10 @@ export default async function Home() {
       <p>
         Это демо приложения Next.js, развернутого на Ubuntu Linux. Оно также
         включает базу данных Postgres и прокси Nginx.{' '}
-        <a href='https://github.com/leerob/next-self-host'>Смотрите код</a>.
+        <a href='https://github.com/harryheman/self-host-nextjs'>
+          Смотрите код
+        </a>
+        .
       </p>
 
       <h3>Получение данных</h3>
@@ -52,11 +55,11 @@ export default async function Home() {
       <p>
         Для оптимизации изображений с помощью сторонних сервисов можно создать
         собственный загрузчик (loader) изображений. Пример можно найти{' '}
-        <a href='https://github.com/leerob/next-self-host/blob/main/image-loader.ts'>
+        <a href='https://github.com/harryheman/self-host-nextjs/blob/main/image-loader.ts'>
           здесь
         </a>
         , а включить загрузчик нужно в{' '}
-        <a href='https://github.com/leerob/next-self-host/blob/main/next.config.ts'>
+        <a href='https://github.com/harryheman/self-host-nextjs/blob/main/next.config.ts'>
           <code>next.config.ts</code>
         </a>
         .

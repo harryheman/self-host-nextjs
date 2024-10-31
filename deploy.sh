@@ -10,7 +10,7 @@ DOMAIN_NAME="nextselfhost.ru" # замените на свой
 EMAIL="aio350@mail.ru" # замените на свой
 
 # Переменные для скриптов
-REPO_URL="https://github.com/leerob/next-self-host.git"
+REPO_URL="https://github.com/harryheman/self-host-nextjs.git"
 APP_DIR=~/myapp
 SWAP_SIZE="1G"  # область подкачки в 1 Гб
 
