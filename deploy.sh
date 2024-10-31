@@ -2,7 +2,7 @@
 
 # Переменные окружения
 POSTGRES_USER="postgres" # замените на свое
-POSTGRES_PASSWORD=$(openssl rand -base64 12)  # генерируем произвольный 12-символьный пароль
+POSTGRES_PASSWORD="postgres" # замените на свой
 POSTGRES_DB="mydb"
 SECRET_KEY="my-secret" # для демо приложения
 NEXT_PUBLIC_SAFE_KEY="safe-key" # для демо приложения
