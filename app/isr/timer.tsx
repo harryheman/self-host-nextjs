@@ -15,12 +15,12 @@ export function FreshnessTimer({ generatedAt }: { generatedAt: number }) {
     return () => clearInterval(timer)
   }, [generatedAt])
 
+  if (!secondsElapsed) return null
+
   return (
     <p>
-      Данные не актуализировались в течение:{' '}
-      {Boolean(secondsElapsed)
-        ? `${secondsElapsed} секунд${secondsElapsed === 1 ? 'ы' : ''}`
-        : ''}
+      Данные были обновлены{' '}
+      {`${secondsElapsed} секунд${secondsElapsed === 1 ? 'у' : '(ы)'}`} назад.
     </p>
   )
 }
