@@ -142,7 +142,7 @@ server {
         proxy_set_header Host \$host;
         proxy_cache_bypass \$http_upgrade;
 
-        # Отключаем буферизацию дял поддержки потоков
+        # Отключаем буферизацию для поддержки потоков
         proxy_buffering off;
         proxy_set_header X-Accel-Buffering no;
     }
