@@ -4,8 +4,10 @@
 POSTGRES_USER="postgres" # замените на свое
 POSTGRES_PASSWORD="postgres" # замените на свой
 POSTGRES_DB="mydb"
+
 SECRET_KEY="my-secret" # для демо приложения
 NEXT_PUBLIC_SAFE_KEY="safe-key" # для демо приложения
+
 DOMAIN_NAME="nextselfhost.ru" # замените на свой
 EMAIL="aio350@mail.ru" # замените на свой
 
