@@ -1,22 +1,22 @@
 #!/bin/bash
 
 # Переменные окружения
-POSTGRES_USER="postgres" # замените на свое
-POSTGRES_PASSWORD="postgres" # замените на свой
+POSTGRES_USER="postgres" # можно заменить
+POSTGRES_PASSWORD="postgres" # необходимо заменить
 POSTGRES_DB="mydb"
 
 SECRET_KEY="my-secret" # для демо приложения
 NEXT_PUBLIC_SAFE_KEY="safe-key" # для демо приложения
 
-DOMAIN_NAME="nextselfhost.ru" # замените на свой
-EMAIL="aio350@mail.ru" # замените на свой
+DOMAIN_NAME="nextselfhost.ru" # необходимо заменить
+EMAIL="aio350@mail.ru" # необходимо заменить
 
 # Переменные для скриптов
-REPO_URL="https://github.com/harryheman/self-host-nextjs.git"
+REPO_URL="https://github.com/harryheman/self-host-nextjs.git" # необходимо заменить
 APP_DIR=~/myapp
 SWAP_SIZE="1G"  # область подкачки в 1 Гб
 
-# Обновляем список пакетов и обновляем существующие пакеты
+# Обновляем список пакетов и существующие пакеты
 sudo apt update && sudo apt upgrade -y
 
 # Добавляем область подкачки
@@ -59,7 +59,7 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-# Проверяем, что Docker запускается при запуске системы и запускаем сервис Docker
+# Запускаем Docker при старте системы и запускаем сервис Docker
 sudo systemctl enable docker
 sudo systemctl start docker
 
