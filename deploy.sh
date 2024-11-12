@@ -2,7 +2,7 @@
 
 # Переменные окружения
 POSTGRES_USER="myuser" # можно заменить
-POSTGRES_PASSWORD="botbanem" # необходимо заменить
+POSTGRES_PASSWORD="postgres" # необходимо заменить
 POSTGRES_DB="mydb"
 
 SECRET_KEY="my-secret" # для демо приложения
