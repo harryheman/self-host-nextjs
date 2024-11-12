@@ -19,7 +19,7 @@ ssh root@ip_сервера
 2. **Загружаем скрипт для деплоя**:
 
 ```bash
-# необходимо заменить
+# необходимо заменить путь к файлу в репозитории
 curl -o ~/deploy.sh https://raw.githubusercontent.com/harryheman/self-host-nextjs/main/deploy.sh
 ```
 

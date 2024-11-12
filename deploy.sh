@@ -2,7 +2,7 @@
 
 # Переменные окружения
 POSTGRES_USER="myuser" # можно заменить
-POSTGRES_PASSWORD="postgres" # необходимо заменить
+POSTGRES_PASSWORD="botbanem" # необходимо заменить
 POSTGRES_DB="mydb"
 
 SECRET_KEY="my-secret" # для демо приложения
@@ -171,7 +171,7 @@ echo "Деплой завершен. Приложение Next.js и база д
 
 Файл .env был создан и содержит следующие значения:
 - POSTGRES_USER
-- POSTGRES_PASSWORD (произвольно сгенерированный)
+- POSTGRES_PASSWORD
 - POSTGRES_DB
 - DATABASE_URL
 - SECRET_KEY
