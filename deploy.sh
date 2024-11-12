@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Переменные окружения
-POSTGRES_USER="postgres" # можно заменить
+POSTGRES_USER="myuser" # можно заменить
 POSTGRES_PASSWORD="postgres" # необходимо заменить
 POSTGRES_DB="mydb"
 

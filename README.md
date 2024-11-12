@@ -19,6 +19,7 @@ ssh root@ip_сервера
 2. **Загружаем скрипт для деплоя**:
 
 ```bash
+# необходимо заменить
 curl -o ~/deploy.sh https://raw.githubusercontent.com/harryheman/self-host-nextjs/main/deploy.sh
 ```
 
@@ -71,7 +72,7 @@ https://ваш-домен
 ```bash
 docker exec -it myapp-db-1 sh
 apk add --no-cache postgresql-client
-psql -U postgres -d mydb -c '
+psql -U myuser -d mydb -c '
 CREATE TABLE IF NOT EXISTS "todos" (
   "id" serial PRIMARY KEY NOT NULL,
   "content" varchar(255) NOT NULL,
@@ -109,7 +110,7 @@ npx prisma studio
 - `docker-compose up -d` - запуск контейнеров в фоновом режиме
 - `sudo systemctl restart nginx` - перезапуск Nginx
 - `docker exec -it myapp-web-1 sh` - подключение к контейнеру Next.js
-- `docker exec -it myapp-db-1 psql -U postgres -d mydb` - подключение к Postgres
+- `docker exec -it myapp-db-1 psql -U myuser -d mydb` - подключение к Postgres
 
 ## Полезные ресурсы
 
