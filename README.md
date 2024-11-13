@@ -71,21 +71,16 @@ https://ваш-домен
 
 ```bash
 docker exec -it myapp-db-1 sh
-apk add --no-cache postgresql-client
-psql -U myuser -d mydb -c '
-CREATE TABLE IF NOT EXISTS "todos" (
-  "id" serial PRIMARY KEY NOT NULL,
-  "content" varchar(255) NOT NULL,
-  "completed" boolean DEFAULT false,
-  "created_at" timestamp DEFAULT now()
-);'
+psql -U myuser -d mydb
+\dt
+SELECT * FROM "Todo";
 ```
 
 Для последующих обновлений предназначен скрипт `update.sh`.
 
 ## Локальный запуск
 
-Для локального запуска проекта с помощью Docker нужно сделать следующее:
+Команда для локального запуска проекта с помощью Docker Compose:
 
 ```bash
 docker-compose up -d
@@ -93,7 +88,7 @@ docker-compose up -d
 
 Эта команда запустит оба сервиса и сделает приложение доступным по адресу: `http://localhost:3000` с БД, запущенной в фоновом режиме. Мы также создаем сеть, чтобы контейнеры могли общаться между собой.
 
-Для просмотра содержимого локальной БД можно использовать Prisma Studio:
+Для просмотра содержимого БД можно использовать Prisma Studio:
 
 ```bash
 npm run studio
@@ -103,18 +98,13 @@ npx prisma studio
 
 ## Полезные команды
 
-- `docker-compose ps` - проверка статуса контейнеров Docker
+- `docker-compose ps` - получение списка запущенных контейнеров Docker
 - `docker-compose logs web` - отображение логов Next.js
-- `docker-compose logs cron` - отображение логов cron
-- `docker-compose down` - остановка контейнеров Docker
+- `docker-compose down` - остановка и удаление контейнеров Docker
 - `docker-compose up -d` - запуск контейнеров в фоновом режиме
+- `docker system prune -a` - удаление контейнеров, образов и сетей Docker
+- `docker volume ls` - получение списка томов
+- `docker volume rm postgres_data` - удаление тома `postgres_data`
 - `sudo systemctl restart nginx` - перезапуск Nginx
 - `docker exec -it myapp-web-1 sh` - подключение к контейнеру Next.js
 - `docker exec -it myapp-db-1 psql -U myuser -d mydb` - подключение к Postgres
-
-## Полезные ресурсы
-
-- [Пример Kubernetes](https://github.com/ezeparziale/nextjs-k8s)
-- [Адаптер кэша Redis для Next.js](https://github.com/vercel/next.js/tree/canary/examples/cache-handler-redis)
-- [ipx - библиотека оптимизации изображений](https://github.com/unjs/ipx)
-- [OrbStack - быстрый десктопный клиент Docker](https://orbstack.dev/)
